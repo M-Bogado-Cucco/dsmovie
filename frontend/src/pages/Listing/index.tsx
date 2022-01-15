@@ -31,12 +31,14 @@ function Listing() {
             });
     }, [pageNumber]);
 
-    // Forma errada
+    const handlePageChange = (newPageNumber : number) => {
+        setPageNumber(newPageNumber);
+    }
 
 
     return (
         <>
-            <Pagination></Pagination>
+            <Pagination page={page} onChange={handlePageChange }/>
 
             <div className="container">
                 <div className="row">
